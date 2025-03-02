@@ -20,13 +20,13 @@ concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: false
 jobs:
-  action-lint:
+  actions-lint:
     name: actions-lint
     uses: nkbinnovations/reusable-workflows/.github/workflows/github-action-lint.yaml@v1 # best to use the SHA instead of tags for immutable code.
   terraform-lint:
     name: terraform-lint
     needs:
-      - action-lint
+      - actions-lint
     uses: nkbinnovations/reusable-workflows/.github/workflows/github-terraform-lint.yaml@v1 # best to use the SHA instead of tags for immutable code.
     with:
       terraform_version: '1.10.3'
