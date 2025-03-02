@@ -16,9 +16,6 @@ permissions:
   checks: write
   actions: write
   issues: write
-concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}  # This is the concurrency group name and should be unique per pull request
-  cancel-in-progress: ${{ !contains(github.ref, 'release/')}}  # Cancel previous runs if a new run is triggered on a non-release branch
 jobs:
   github-action-lint:
     name: githu-actions-lint
