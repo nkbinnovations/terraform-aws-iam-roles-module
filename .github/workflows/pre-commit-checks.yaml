@@ -16,6 +16,9 @@ permissions:
   checks: write
   actions: write
   issues: write
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: false
 jobs:
   github-action-lint:
     name: githu-actions-lint
@@ -25,3 +28,4 @@ jobs:
     uses: nkbinnovations/reusable-workflows/.github/workflows/github-terraform-lint.yaml@v1 # best to use the SHA instead of tags for immutable code.
     with:
       terraform_version: '1.10.3'
+      terraform_directory: ${{ github.workspace }}
