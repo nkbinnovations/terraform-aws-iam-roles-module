@@ -6,7 +6,7 @@
 # The local values are defined using the locals block.
 locals {
   policy_list = flatten([
-    for role, roleconfig in var.role_config : [
+    for role, roleconfig in var.role_definition : [
       for policy, details in roleconfig.policies : {
         policy_name = policy,
         role_name   = role,

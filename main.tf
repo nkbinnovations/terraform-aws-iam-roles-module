@@ -33,7 +33,7 @@ resource "aws_iam_policy" "policy" {
 # Define the IAM Roles
 resource "aws_iam_role" "role" {
   for_each = {
-    for role, roleconfig in var.role_config : role => roleconfig
+    for role, roleconfig in var.role_definition : role => roleconfig
   }
   name                 = each.key
   permissions_boundary = each.value.permissions_boundry_arn
