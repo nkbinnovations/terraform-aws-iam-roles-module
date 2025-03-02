@@ -28,4 +28,4 @@ jobs:
     uses: nkbinnovations/reusable-workflows/.github/workflows/github-terraform-lint.yaml@v1 # best to use the SHA instead of tags for immutable code.
     with:
       terraform_version: '1.10.3'
-      terraform_directory: ${{ github.workspace }}
+      terraform_directory: '.'
