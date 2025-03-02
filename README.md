@@ -1,7 +1,7 @@
 # terraform-aws-iam-roles-module
 Terraform module to allow AWS users to create IAM roles and attach policy tocreated role
 
-[![code-lint](https://github.com/nkbinnovations/terraform-aws-iam-roles-module/actions/workflows/pre-commit-checks.yaml/badge.svg)](https://github.com/nkbinnovations/terraform-aws-iam-roles-module/actions/workflows/pre-commit-checks.yaml)
+[![code-lint](https://github.com/nkbinnovations/terraform-aws-iam-roles-module/actions/workflows/pre-commit-checks.yaml/badge.svg?event=pull_request)](https://github.com/nkbinnovations/terraform-aws-iam-roles-module/actions/workflows/pre-commit-checks.yaml)
 
 ## Requirements
 No requirements.
