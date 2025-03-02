@@ -17,9 +17,9 @@ concurrency:
 jobs:
   github-action-lint:
     name: githu-actions-lint
-    uses: nkbinnovations/reusable-workflows/.github/workflows/github-action-lint.yaml@v2 # best to use the SHA instead of tags for immutable code.
+    uses: nkbinnovations/reusable-workflows/.github/workflows/github-action-lint.yaml@v1 # best to use the SHA instead of tags for immutable code.
   github-terraform-lint:
     name: terraform-lint
-    uses: nkbinnovations/reusable-workflows/.github/workflows/github-terraform-lint.yaml@v2 # best to use the SHA instead of tags for immutable code.
+    uses: nkbinnovations/reusable-workflows/.github/workflows/github-terraform-lint.yaml@v1 # best to use the SHA instead of tags for immutable code.
     with:
       terraform_version: '1.10.3'
